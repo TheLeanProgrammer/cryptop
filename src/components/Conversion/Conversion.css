@@ -1,0 +1,35 @@
+.conversion-text {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    /* line-height: 50px; */
+    /* or 100% */
+    margin: 0;
+    text-align: center;
+
+    /* text */
+
+    color: #252b42;
+}
+
+.coin-unit-input {
+    max-width: 100px;
+}
+
+.input-field {
+    display: inline;
+}
+
+/* .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* label underline focus color */
+.input-field input[type='text']:focus {
+    border-bottom: 1px solid #4fb8ff !important;
+    box-shadow: 0 1px 0 0 #4fb8ff !important;
+}

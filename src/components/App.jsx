@@ -1,22 +1,15 @@
 import React from 'react';
-import logo from './../assets/landing.png';
-import './App.css';
+import Conversion from './Conversion/Conversion';
+import Landing from './Landing/Landing';
 
 const App = () => {
     return (
         <div className='app-container container'>
             {/* Section 1: Landing */}
-            <section className='landing-container'>
-                <div className='center-align'>
-                    <img
-                        className='landing-cover'
-                        src={logo}
-                        alt='landing-cover'
-                    />
-                </div>
-            </section>
+            <Landing />
 
             {/* Section 2: Conversion */}
+            <Conversion />
 
             {/* Section 3: Top currencies card */}
         </div>
