@@ -1,26 +1,29 @@
 import React from 'react';
-import './Conversion.css';
+import Token from './Token';
 
 const Conversion = () => {
+    const removeFirstToken = () => {
+        console.log('Removing first token...');
+    };
+
     return (
         <section className='conversion'>
-            <div className='coin-conversion-container'>
-                <p className='conversion-text'>If you have:</p>
-                <input
-                    type='text'
-                    className='coin-unit-input'
-                    placeholder='Coin units'
-                />
-                <div className='coin-chip'>
-                    <p className='selected-coin-name'>Bitcoin</p>
-                    <i
-                        onClick={() => console.log('CLICKED!!')}
-                        className='close-icon close material-icons'
-                    >
-                        close
-                    </i>
-                </div>
-            </div>
+            {/* Token 1 */}
+            <Token
+                conversionText='If you have:'
+                tokenName='Bitcoin'
+                removeToken={removeFirstToken}
+                fallbackText='Please select the first token'
+            />
+
+            {/* Token 2 */}
+            <Token
+                conversionText='Then you will have:'
+                tokenName='Etherium'
+                removeToken={removeFirstToken}
+                fallbackText='Please select the first token'
+                disableInput={true}
+            />
         </section>
     );
 };

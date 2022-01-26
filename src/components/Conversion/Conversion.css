@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .conversion-text {
@@ -12,11 +13,13 @@
     font-size: 50px;
     margin: 0;
     color: #252b42;
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 
 .coin-unit-input {
     max-width: 100px;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
 }
 
 .coin-chip {
@@ -31,7 +34,7 @@
     box-shadow: 0px 16px 32px 4px rgba(15, 86, 179, 0.22);
     border-radius: 8px;
     min-width: 150px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .close-icon {
@@ -59,4 +62,9 @@ input:focus {
     box-shadow: 0 1px 0 0 #4fb8ff !important;
     /* background: #4fb8ff44 !important; */
     /* border-radius: 6px 6px 2px 2px !important; */
+}
+
+input {
+    font-weight: bold;
+    font-size: 24px !important;
 }
