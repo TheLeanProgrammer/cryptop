@@ -14,3 +14,7 @@
 1. [Merriweather](https://fonts.google.com/specimen/Merriweather)
 2. [Poppins](https://fonts.google.com/specimen/Poppins)
 3. [Rubik](https://fonts.google.com/specimen/Rubik)
+
+## Design
+
+![design](./design.png)
