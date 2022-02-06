@@ -1,0 +1,12 @@
+.currency-list-container {
+    margin-top: 100px;
+}
+
+.currency-section-heading {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 65px;
+    color: #263238;
+}

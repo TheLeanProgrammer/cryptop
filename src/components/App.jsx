@@ -1,5 +1,6 @@
 import React from 'react';
 import Conversion from './Conversion/Conversion';
+import CurrencyList from './Currencies/CurrencyList';
 import Landing from './Landing/Landing';
 
 const App = () => {
@@ -11,7 +12,8 @@ const App = () => {
             {/* Section 2: Conversion */}
             <Conversion />
 
-            {/* Section 3: Top currencies card */}
+            {/* Section 3: Top currencies cards */}
+            <CurrencyList />
         </div>
     );
 };
