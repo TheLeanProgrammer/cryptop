@@ -1,5 +1,6 @@
 import React from 'react';
 import './Conversion.css';
+import close from './../../assets/close.png';
 
 const Token = ({
     conversionText,
@@ -21,12 +22,12 @@ const Token = ({
                     />
                     <div className='coin-chip'>
                         <p className='selected-coin-name'>{tokenName}</p>
-                        <i
+                        <span
                             onClick={removeToken}
                             className='close-icon close material-icons'
                         >
-                            close
-                        </i>
+                            <img src={close} alt='close-btn' />
+                        </span>
                     </div>
                 </>
             ) : (

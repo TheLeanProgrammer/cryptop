@@ -22,7 +22,7 @@ const Conversion = () => {
                 tokenName='Etherium'
                 removeToken={removeFirstToken}
                 fallbackText='Please select the first token'
-                disableInput={true}
+                disableInput={false}
             />
         </section>
     );

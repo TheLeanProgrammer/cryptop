@@ -1,0 +1,15 @@
+.app-container {
+    /* 
+     * This will look horrible on mobile devices
+     * But, I won't fix this, too boring! :) 
+     */
+    width: 70%;
+    margin-left: 15%;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-container {
+        width: 100%;
+        margin: 0;
+    }
+}
