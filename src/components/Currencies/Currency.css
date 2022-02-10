@@ -11,3 +11,69 @@
     text-align: center;
     color: #263238;
 }
+
+.crypto-cards-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crypto-card {
+    width: 280px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 32px 20px 32px;
+    margin: 32px auto;
+    /* align-items: center; */
+}
+
+.crypto-card:hover {
+    transition: box-shadow 0.4s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.currency-logo {
+    height: 128px;
+    width: 128px;
+    align-self: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.coin-name,
+.coin-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: #252b42;
+}
+
+.coin-name {
+    font-family: Merriweather;
+    font-weight: 900;
+}
+
+.coin-price {
+    font-family: Poppins;
+    font-weight: 800;
+}
+
+.coin-name-title {
+    margin-top: 36px;
+    font-size: 36px;
+}
+
+.coin-symbol {
+    font-size: 16px;
+}
+
+.coin-dollar {
+    font-size: 36px;
+}
+
+.coin-price-value {
+    font-size: 48px;
+}
