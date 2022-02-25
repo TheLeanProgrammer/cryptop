@@ -4,6 +4,19 @@ import CurrencyList from './Currencies/CurrencyList';
 import Landing from './Landing/Landing';
 import './App.css';
 
+/**
+ * Selected Currency Schema
+ * [
+ *  {
+ *      currency: Currency,
+ *      units: number
+ *  },
+ *  {
+ *      Currency: Currency,
+ *      units: number
+ *  }
+ * ]
+ */
 const App = () => {
     const [allCurrencies, setAllCurrencies] = useState([]);
     const [selectedCurrencies, setSelectedCurrencies] = useState([]);
@@ -22,6 +35,10 @@ const App = () => {
         fetchCurrencies();
     }, []);
 
+    const selectCurrency = () => {
+        console.log('Thanks for pressing it!');
+    };
+
     return (
         <div className='app-container'>
             {/* Section 1: Landing */}
@@ -31,7 +48,11 @@ const App = () => {
             <Conversion selectedCurrencies={selectedCurrencies} />
 
             {/* Section 3: Top currencies cards */}
-            <CurrencyList allCurrencies={allCurrencies} />
+            <CurrencyList
+                selectedCurrencies={selectedCurrencies}
+                selectCurrency={selectCurrency}
+                allCurrencies={allCurrencies}
+            />
         </div>
     );
 };

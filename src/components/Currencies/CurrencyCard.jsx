@@ -1,9 +1,18 @@
 import React from 'react';
 import './Currency.css';
 
-const CurrencyCard = ({ coinName, coinSymbol, coinPrice }) => {
+const CurrencyCard = ({
+    coinName,
+    coinSymbol,
+    coinPrice,
+    onCardClick,
+    active,
+}) => {
     return (
-        <div className='crypto-card'>
+        <div
+            onClick={onCardClick}
+            className={`crypto-card ${active && 'crypto-card-active'}`}
+        >
             <img
                 className='currency-logo'
                 src={`https://cryptoicon-api.vercel.app/api/icon/${coinSymbol.toLowerCase()}`}

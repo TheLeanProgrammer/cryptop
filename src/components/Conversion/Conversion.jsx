@@ -15,7 +15,8 @@ const Conversion = ({ selectedCurrencies }) => {
             {coinMatchesRequirement(1) && (
                 <Token
                     conversionText='If you have:'
-                    tokenName='Bitcoin'
+                    currency={selectedCurrencies[0].currency}
+                    units={selectedCurrencies[0].units}
                     removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
                 />
@@ -25,7 +26,8 @@ const Conversion = ({ selectedCurrencies }) => {
             {coinMatchesRequirement(2) && (
                 <Token
                     conversionText='Then you will have:'
-                    tokenName='Etherium'
+                    currency={selectedCurrencies[1].currency}
+                    units={selectedCurrencies[1].units}
                     removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
                     disableInput={false}

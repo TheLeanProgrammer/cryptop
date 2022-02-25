@@ -3,12 +3,15 @@ import './Conversion.css';
 import close from './../../assets/close.png';
 
 const Token = ({
+    currency,
+    units,
     conversionText,
-    tokenName,
     removeToken,
     fallbackText,
     disableInput = false,
 }) => {
+    const tokenName = currency.name;
+
     return (
         <div className='coin-conversion-container'>
             {tokenName ? (
@@ -19,6 +22,7 @@ const Token = ({
                         className='coin-unit-input'
                         placeholder='Units'
                         disabled={disableInput}
+                        value={units}
                     />
                     <div className='coin-chip'>
                         <p className='selected-coin-name'>{tokenName}</p>
