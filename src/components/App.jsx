@@ -6,6 +6,7 @@ import './App.css';
 
 const App = () => {
     const [allCurrencies, setAllCurrencies] = useState([]);
+    const [selectedCurrencies, setSelectedCurrencies] = useState([]);
 
     useEffect(() => {
         // Fetch all currencies as soon as the app loads
@@ -27,7 +28,7 @@ const App = () => {
             <Landing />
 
             {/* Section 2: Conversion */}
-            <Conversion />
+            <Conversion selectedCurrencies={selectedCurrencies} />
 
             {/* Section 3: Top currencies cards */}
             <CurrencyList allCurrencies={allCurrencies} />
