@@ -63,6 +63,7 @@ const App = () => {
     const selectCurrency = (currency) => {
         console.log('Selecting currency', currency.name);
         if (selectedCurrencies.length < 2) {
+            // TODO - check the units of first currency and auto update 2nd units for a new 2nd currency selection
             setSelectedCurrencies([
                 ...selectedCurrencies,
                 { currency, units: 0 },
@@ -91,6 +92,14 @@ const App = () => {
         }
     };
 
+    const removeSelectedCurrency = (index) => {
+        console.log('Truing to remove', index);
+        // Splice method causes array mutation - we should never update the state directly
+        const newSelectedCurrencies = [...selectedCurrencies];
+        newSelectedCurrencies.splice(index, 1);
+        setSelectedCurrencies(newSelectedCurrencies);
+    };
+
     return (
         <div className='app-container'>
             {/* Section 1: Landing */}
@@ -98,6 +107,7 @@ const App = () => {
 
             {/* Section 2: Conversion */}
             <Conversion
+                onRemoveSelectedCurrency={removeSelectedCurrency}
                 onUpdateUnits={onUpdateUnits}
                 selectedCurrencies={selectedCurrencies}
             />

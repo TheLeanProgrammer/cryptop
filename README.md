@@ -18,3 +18,8 @@
 ## Design
 
 ![design](./design.png)
+
+## TODO (Homework for y'all)
+
+1. Auto covert 2nd units for a new token 2 selection
+2. Add % change section in the currency card (according to the design)

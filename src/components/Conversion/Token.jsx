@@ -6,9 +6,10 @@ const Token = ({
     currency,
     units,
     conversionText,
-    removeToken,
     fallbackText,
     onUpdateUnits,
+    index,
+    onRemoveSelectedCurrency,
     disableInput = false,
 }) => {
     const tokenName = currency.name;
@@ -29,7 +30,7 @@ const Token = ({
                     <div className='coin-chip'>
                         <p className='selected-coin-name'>{tokenName}</p>
                         <span
-                            onClick={removeToken}
+                            onClick={() => onRemoveSelectedCurrency(index)}
                             className='close-icon close material-icons'
                         >
                             <img src={close} alt='close-btn' />

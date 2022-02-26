@@ -1,11 +1,11 @@
 import React from 'react';
 import Token from './Token';
 
-const Conversion = ({ selectedCurrencies, onUpdateUnits }) => {
-    const removeFirstToken = () => {
-        console.log('Removing first token...');
-    };
-
+const Conversion = ({
+    selectedCurrencies,
+    onUpdateUnits,
+    onRemoveSelectedCurrency,
+}) => {
     const coinMatchesRequirement = (expectedLength) =>
         selectedCurrencies && selectedCurrencies.length >= expectedLength;
 
@@ -17,9 +17,11 @@ const Conversion = ({ selectedCurrencies, onUpdateUnits }) => {
                     conversionText='If you have:'
                     currency={selectedCurrencies[0].currency}
                     units={selectedCurrencies[0].units}
-                    removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
                     onUpdateUnits={onUpdateUnits}
+                    index={0}
+                    onRemoveSelectedCurrency={onRemoveSelectedCurrency}
+                    disableInput={selectedCurrencies.length === 1}
                 />
             )}
 
@@ -29,10 +31,11 @@ const Conversion = ({ selectedCurrencies, onUpdateUnits }) => {
                     conversionText='Then you will have:'
                     currency={selectedCurrencies[1].currency}
                     units={selectedCurrencies[1].units}
-                    removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
                     disableInput={true}
                     onUpdateUnits={onUpdateUnits}
+                    index={1}
+                    onRemoveSelectedCurrency={onRemoveSelectedCurrency}
                 />
             )}
         </section>
