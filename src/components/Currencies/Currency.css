@@ -40,6 +40,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 
+.hoverable {
+    cursor: pointer;
+}
+
+.not-hoverable {
+    cursor: not-allowed;
+}
+
 .currency-logo {
     height: 128px;
     width: 128px;

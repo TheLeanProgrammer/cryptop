@@ -11,14 +11,14 @@ const CurrencyList = ({
         const isActive = selectedCurrencies.some(
             (sc) => sc.currency.id === currency.id
         );
+        const reachedLimit = selectedCurrencies.length === 2;
         return (
             <CurrencyCard
+                currency={currency}
                 onCardClick={selectCurrency}
-                coinName={currency.name}
-                coinSymbol={currency.symbol}
-                coinPrice={currency.price_usd}
                 key={currency.id}
                 active={isActive}
+                reachedLimit={reachedLimit}
             />
         );
     });

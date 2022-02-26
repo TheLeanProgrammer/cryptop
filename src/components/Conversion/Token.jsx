@@ -8,6 +8,7 @@ const Token = ({
     conversionText,
     removeToken,
     fallbackText,
+    onUpdateUnits,
     disableInput = false,
 }) => {
     const tokenName = currency.name;
@@ -22,6 +23,7 @@ const Token = ({
                         className='coin-unit-input'
                         placeholder='Units'
                         disabled={disableInput}
+                        onChange={(event) => onUpdateUnits(event.target.value)}
                         value={units}
                     />
                     <div className='coin-chip'>

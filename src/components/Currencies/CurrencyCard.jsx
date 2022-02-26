@@ -1,17 +1,17 @@
 import React from 'react';
 import './Currency.css';
 
-const CurrencyCard = ({
-    coinName,
-    coinSymbol,
-    coinPrice,
-    onCardClick,
-    active,
-}) => {
+const CurrencyCard = ({ currency, onCardClick, active, reachedLimit }) => {
+    const coinName = currency.name;
+    const coinSymbol = currency.symbol;
+    const coinPrice = currency.price_usd;
+
     return (
         <div
-            onClick={onCardClick}
-            className={`crypto-card ${active && 'crypto-card-active'}`}
+            onClick={() => onCardClick(currency)}
+            className={`crypto-card ${active && 'crypto-card-active'} ${
+                reachedLimit ? 'not-hoverable' : 'hoverable'
+            }`}
         >
             <img
                 className='currency-logo'

@@ -1,7 +1,7 @@
 import React from 'react';
 import Token from './Token';
 
-const Conversion = ({ selectedCurrencies }) => {
+const Conversion = ({ selectedCurrencies, onUpdateUnits }) => {
     const removeFirstToken = () => {
         console.log('Removing first token...');
     };
@@ -19,6 +19,7 @@ const Conversion = ({ selectedCurrencies }) => {
                     units={selectedCurrencies[0].units}
                     removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
+                    onUpdateUnits={onUpdateUnits}
                 />
             )}
 
@@ -30,7 +31,8 @@ const Conversion = ({ selectedCurrencies }) => {
                     units={selectedCurrencies[1].units}
                     removeToken={removeFirstToken}
                     fallbackText='Please select the first token'
-                    disableInput={false}
+                    disableInput={true}
+                    onUpdateUnits={onUpdateUnits}
                 />
             )}
         </section>
