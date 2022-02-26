@@ -35,14 +35,33 @@ const App = () => {
         fetchCurrencies();
     }, []);
 
+    const unitsOfToken1 =
+        selectedCurrencies.length > 0 ? selectedCurrencies[0].units : 0;
     useEffect(() => {
-        // Add some token 2 unit update logic here
         console.log('Selected currencies were changed', selectedCurrencies);
-    }, [selectedCurrencies]);
+        if (selectedCurrencies.length < 2) return;
+
+        /**
+         * If two currencies are already selected
+         * Update the units of second one based on first one
+         * number of c2 = (number of c1) * ((cost of c1)/(cost of c2))
+         */
+        const c1 = selectedCurrencies[0].currency.price_usd;
+        const c2 = selectedCurrencies[1].currency.price_usd;
+        const n1 = selectedCurrencies[0].units;
+        const n2 = (n1 * c1) / c2;
+
+        setSelectedCurrencies([
+            selectedCurrencies[0],
+            {
+                currency: selectedCurrencies[1].currency,
+                units: n2,
+            },
+        ]);
+    }, [unitsOfToken1]);
 
     const selectCurrency = (currency) => {
         console.log('Selecting currency', currency.name);
-        // TODO: Add some currency conversion logic here
         if (selectedCurrencies.length < 2) {
             setSelectedCurrencies([
                 ...selectedCurrencies,
