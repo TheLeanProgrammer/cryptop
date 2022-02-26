@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cryptop/static/css/main.b2e794fe.css",
+    "main.js": "/cryptop/static/js/main.764bb2c4.js",
+    "static/media/landing.png": "/cryptop/static/media/landing.92fc66f3b224baea81d0.png",
+    "index.html": "/cryptop/index.html",
+    "main.b2e794fe.css.map": "/cryptop/static/css/main.b2e794fe.css.map",
+    "main.764bb2c4.js.map": "/cryptop/static/js/main.764bb2c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2e794fe.css",
+    "static/js/main.764bb2c4.js"
+  ]
+}
